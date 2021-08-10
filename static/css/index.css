@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: boder-box;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    background-color: #f3f5f7;
+}
+/* Header da página */
+header{
+    background: rgb(87,74,232);
+    background: linear-gradient(90deg, rgba(87,74,232,1) 0%, rgba(62,161,219,1) 100%);
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    padding: 1.4rem 0 1.4rem 0;
+
+}
+
+/* nav */
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom:5rem;
+    width: 70%;
+    margin: auto;
+
+}
+header nav h1{
+    color: #fff;
+    font-weight: lighter;
+}
+header nav a{
+    text-decoration: none;
+    color: #fff;
+    font-size:1.3rem;
+}
+
+
+/* pesquisa no site */
+header form{
+    width: 70%;
+    margin: auto;
+    height: 2rem;
+    background-color: #f3f5f731;
+    border-radius: 5px;
+    color: white;
+    font-weight: lighter;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: .4rem;
+
+}
+header form i{
+    margin: 0 .8rem 0 .1rem;
+}
+header form input{
+    height:100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    border: none ;
+    
+}
+header form input::placeholder {
+    color: white;
+}
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    background-color: #f3f5f7;
+    padding: 1rem;
+}
+article{
+    width: 70%;
+    height: auto;
+    padding:1rem;
+    border-radius:8px;
+    box-shadow: 8px 6px 15px 0px #A3A1A1;
+    transition: all 0.2s ease-out 0s;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+}
+article:hover{
+    transform:scale(1.001);
+    box-shadow: 9px 10px 15px 0px #ABABAB;
+    transition: all 0.3s ease-in 0s;
+}
+article div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fa-heart {
+    color: #574ae8;
+}
+article h2{
+    font-weight: 500;
+    margin: .5rem;
+
+}
+article p, span {
+    color: #b6b6b6;
+}
