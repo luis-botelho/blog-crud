@@ -4,25 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/new.css">
+    <script src="https://kit.fontawesome.com/7515ad9b6d.js" crossorigin="anonymous"></script>
     <title>Escrever novo post</title>
 </head>
-<body>
-    <form action="POST">
-        <label for="Titulo">
-            <span>Titulo do artigo</span>
-            
-        </label>
-        <input type="text" name="Titulo" value="">
-        <label for="Artigo">
-            <span>Artigo</span>
-        </label>
-            <textarea name="artigo" id="" cols="30" rows="10"></textarea>
-        <label for="autor">
-            <span>Nome do autor</span>
-        </label>
-        <input type="text" name="nome" id="nome" placeholder="">
+<header>
+    <nav>
+        <h1>Bluemers </h1>
+        <a class="blog" href='/'>Voltar</a>
+    </nav>
+    <img src="../static/img/article.svg" alt="">
 
-        <button type="submit">Postar</button>
-    </form>
+</header>
+<body>
+    <section id="cadastro">
+        {%if artigo == ''%}
+        <form action="/new" method="POST">
+            <h3>Novo Artigo</h3>
+        {%else%}
+        <form action="/new" method="POST">
+            <h3>Editar Artigo</h3>
+        {%endif%}
+            <label for="Titulo">
+                <span>Titulo do artigo:</span>
+        
+            </label>
+            <input type="text" name="Titulo" value="">
+            <label for="Artigo">
+                <span>Artigo:</span>
+            </label>
+                <textarea name="artigo" id="" cols="30" rows="10"></textarea>
+            <label for="autor">
+                <span>Nome do autor:</span>
+            </label>
+            <input type="text" name="autor" id="nome" placeholder="">
+            <button type="submit">
+                {%if artigo == ''%}
+                Postar
+                {%else%}
+                Atualizar
+                {%endif%}
+            </button>
+            <button id="cancel" type="button">
+                Cancelar
+            </button>
+        </form>
+    </section>
 </body>
 </html>
